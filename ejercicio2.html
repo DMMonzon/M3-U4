@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres</title>
+</head>
+<style>
+    body {
+        margin: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    textarea {
+        width: 500px;
+        color: rgb(39, 39, 39);
+        font-size: 14px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    p {
+        color: rgb(134, 134, 134);
+        font-size: 12px;
+        font-weight: lighter;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+</style>
+<body>
+    <h3>Sugerencias:</h3>
+    <textarea class="texto" placeholder="Escriba aquí su comentario..." onkeyup="contar(this);"></textarea>
+<p id="contador">0 caracteres</p>
+
+<script>
+    function contar(texto){
+    document.getElementById("contador").innerHTML = texto.value.length+' caracteres';
+}
+</script>
+</body>
+</html>

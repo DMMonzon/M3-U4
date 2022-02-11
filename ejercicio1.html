@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuadrados</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      border: solid black 1px;
+      color: white;
+    }
+    .container {
+      display: flex;
+      align-items: end;
+      justify-content: space-evenly;
+      height: 300px;
+      width: 300px;
+      border: none;
+      margin: 0px auto;
+    }
+    #rojo {
+      background-color: red;
+    }
+    #azul {
+      background-color: blue;
+    }
+    #verde {
+      background-color: green;
+    }
+    .texto {
+        color: white;
+        font-size: 23px;
+        margin: 20px auto;
+        text-align: center;
+    }
+  </style>
+
+  <body>
+    <div class="texto">Elija el color del fondo:</div>
+    <div class="container">
+      <button id="rojo">Rojo</button>
+      <button id="azul">Azul</button>
+      <button id="verde">Verde</button>
+    </div>
+
+    <script>
+      var body = document.getElementsByTagName("body")[0];
+      var rojo = document.getElementById("rojo");
+      var azul = document.getElementById("azul");
+      var verde = document.getElementById("verde");
+
+      rojo.addEventListener("click", function () {
+        body.style.backgroundColor = "red";
+        alert("Usted ha elegido el color ROJO.");
+      });
+      azul.addEventListener("click", function () {
+        body.style.backgroundColor = "blue";
+        alert("Usted ha elegido el color AZUL.");
+      });
+      verde.addEventListener("click", function () {
+        body.style.backgroundColor = "green";
+        alert("Usted ha elegido el color VERDE.");
+      });
+
+    </script>
+  </body>
+</html>
